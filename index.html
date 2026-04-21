@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Message spécial</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff4e50, #fc913a);
+    font-family: Arial, sans-serif;
+}
+
+/* Bouton */
+#btn {
+    text-decoration: none;
+    background: white;
+    color: #ff4e50;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+#btn:hover {
+    background: #ff4e50;
+    color: white;
+}
+
+/* Message caché */
+#message {
+    display: none;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    max-width: 80%;
+}
+</style>
+
+</head>
+<body>
+
+<a href="#" id="btn" onclick="showMessage()">Clique ici 💖</a>
+
+<div id="message">
+    T'es la plus belle personne au monde, ne change jamais 💕
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("message").style.display = "block";
+    document.getElementById("btn").style.display = "none"; // 👈 cache le bouton
+}
+</script>
+
+</body>
+</html>
